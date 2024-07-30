@@ -76,6 +76,9 @@ function Table(props) {
   return (
     <div className="Table">
       <div className="container">
+        <h1 className='table-title'>
+          Live Arbitrage Opportunities
+        </h1>
         <table {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
