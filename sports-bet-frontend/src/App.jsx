@@ -1,11 +1,14 @@
-import Table from "./components/home/Table.jsx";
+import { Table } from "./components/home";
 import { Header } from './components/common'
+import { Description } from "./components/home";
+import './App.css'
 
 function App() {
-  return(
-    <div>
-      <Header/>
-      <Table/>
+  return (
+    <div className='flexbox'>
+      <Header />
+      <Table />
+      <Description />
     </div>
   )
 }
