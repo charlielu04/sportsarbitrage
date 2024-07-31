@@ -1,0 +1,13 @@
+html,
+body {
+    height: 130%;
+}
+
+body {
+    background-image: linear-gradient(to right, #77bfbd, #7b23b7);
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+}

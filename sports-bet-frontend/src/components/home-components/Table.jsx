@@ -4,7 +4,7 @@ import { useTable } from "react-table";
 import './Table.css';
 
 
-function Table(props) {
+function Table() {
   const [data, setData] = React.useState([]);
   const columns = React.useMemo(
     () => [
@@ -68,14 +68,16 @@ function Table(props) {
     axios.get("http://localhost:3001/picks").then((res) => {
       setData(res.data);
     });
-    console.log("finished updating picks");
   }, []);
 
-  console.log("using table")
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
   return (
     <div className="Table">
+      <h1 className='table-title'>
+        Live Arbitrage Opportunities
+      </h1>
       <div className="container">
+
         <table {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (
