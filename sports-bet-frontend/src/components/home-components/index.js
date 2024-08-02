@@ -1,7 +1,5 @@
-import Description from './Description';
-import Table from './Table';
+import Description from "./Description";
+import Table from "./Table";
+import SignUpForm from "./SignUpForm";
 
-export {
-    Description,
-    Table
-}
+export { Description, Table, SignUpForm };

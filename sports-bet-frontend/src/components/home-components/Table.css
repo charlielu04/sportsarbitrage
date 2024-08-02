@@ -8,7 +8,7 @@ body {
   max-height: 600px;
   overflow-y: scroll;
   border-radius: 20px;
-  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, .2);
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: rgba(0, 0, 0, 0.08);
   margin-left: 3%;
   margin-right: 5%;
@@ -44,7 +44,6 @@ table {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-
 }
 
 th,
@@ -55,7 +54,7 @@ td {
 }
 
 th {
-  text-align: left;
+  text-align: middle;
 }
 
 thead th {
