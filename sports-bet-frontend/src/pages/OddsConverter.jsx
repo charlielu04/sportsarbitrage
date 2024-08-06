@@ -1,15 +1,13 @@
-import { Header } from '../components/common';
+import { Header } from "../components/common";
+import { Converter } from "../components/odds-converter-components";
 
 function OddsConverter() {
-    return (
-        <div>
-            <Header />
-            <h1>
-                ODDS CONVERTER PAGE
-            </h1>
-        </div>
-
-    );
+  return (
+    <div>
+      <Header />
+      <Converter />
+    </div>
+  );
 }
 
 export default OddsConverter;

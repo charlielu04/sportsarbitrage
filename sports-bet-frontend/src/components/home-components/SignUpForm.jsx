@@ -1,14 +1,17 @@
 import React from "react";
 import axios from "axios";
+import "./SignUpForm";
 
 function SignUpForm() {
-  const [phoneNumber, setPhoneNumber] = React.useState(null)
+  const [name, setName] = React.useState("");
+  const [phoneNumber, setPhoneNumber] = React.useState("");
 
   React.useEffect(() => {
+    console.log("hl");
     axios
-      .post("/user", {
-        firstName: "Fred",
-        lastName: "Flintstone",
+      .post("http://localhost:3001/api/phonenumber", {
+        name: name,
+        phoneNumber: phoneNumber,
       })
       .then(function (response) {
         console.log(response);
@@ -18,16 +21,35 @@ function SignUpForm() {
       });
   });
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <form>
-      <label>Enter your name:
-        <input
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-    </form>
+    <div className="phone-div">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            placeholder="John Doe"
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Phone number:
+          <input
+            type="text"
+            value={phoneNumber}
+            placeholder="+x(xxx)xxx-xxxx"
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+        </label>
+        <input type="submit" />
+      </form>
+    </div>
   );
 }
 

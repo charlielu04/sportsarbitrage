@@ -2,14 +2,19 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const cors=require("cors");
-const corsOptions ={
-   origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
-}
-app.use(cors(corsOptions)) // Use this after the variable declaration
-app.get("/picks",  async (req, res) => {
+const cors = require("cors");
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions)); // Use this after the variable declaration
+
+app.post("/api/phonenumber", (req, res) => {
+  console.log(requestAnimationFrame);
+  res.send(req.body);
+
+app.get("/picks", async (req, res) => {
   const postgres = require("postgres");
   require("dotenv").config();
 
@@ -27,9 +32,9 @@ app.get("/picks",  async (req, res) => {
     },
   });
 
-    var r = await sql`SELECT * FROM picks`;
-    
-    res.send(r);
+  var r = await sql`SELECT * FROM picks`;
+
+  res.send(r);
 });
 
 app.listen(PORT, () => {
