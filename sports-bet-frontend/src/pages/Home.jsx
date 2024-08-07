@@ -1,7 +1,6 @@
 import { Table } from "../components/home-components";
 import { Header } from "../components/common";
 import { SignUpForm } from "../components/home-components";
-import { Description } from "../components/home-components";
 import "./Home.css";
 
 function Home() {
@@ -9,7 +8,6 @@ function Home() {
     <div className="flexbox">
       <Header />
       <Table />
-      <Description />
       <SignUpForm />
     </div>
   );

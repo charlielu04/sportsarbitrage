@@ -10,10 +10,9 @@ const corsOptions = {
 };
 app.use(cors(corsOptions)); // Use this after the variable declaration
 
-app.post("/api/phonenumber", (req, res) => {
-  console.log(requestAnimationFrame);
-  res.send(req.body);
-
+app.post("/api/phonenumber", express.json(), function (req, res) {
+  res.send("Hello POST");
+});
 app.get("/picks", async (req, res) => {
   const postgres = require("postgres");
   require("dotenv").config();
@@ -33,7 +32,6 @@ app.get("/picks", async (req, res) => {
   });
 
   var r = await sql`SELECT * FROM picks`;
-
   res.send(r);
 });
 

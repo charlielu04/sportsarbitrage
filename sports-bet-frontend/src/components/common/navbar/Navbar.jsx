@@ -7,12 +7,16 @@ function Navbar() {
       <a href="/#" className="navbar-item">
         Picks
       </a>
+      <a href="/#explain" className="navbar-item">
+        What is Arb Betting?
+      </a>
       <a href="/#odds-converter" className="navbar-item">
         Odds Converter
       </a>
       <a href="/#arbitrage-calculator" className="navbar-item">
         Arbitrage Calculator
       </a>
+      
     </section>
   );
 }

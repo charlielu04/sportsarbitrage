@@ -7,18 +7,9 @@ function SignUpForm() {
   const [phoneNumber, setPhoneNumber] = React.useState("");
 
   React.useEffect(() => {
-    console.log("hl");
     axios
-      .post("http://localhost:3001/api/phonenumber", {
-        name: name,
-        phoneNumber: phoneNumber,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .post("http://localhost:3001/api/phonenumber", { body: "dan" })
+      .then((e) => console.log(e));
   });
 
   const handleSubmit = (event) => {

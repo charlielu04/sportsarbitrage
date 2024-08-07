@@ -44,6 +44,8 @@ table {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 th,
@@ -71,6 +73,7 @@ tbody tr:hover {
 
 tbody td {
   position: relative;
+  text-align: center;
 }
 
 tbody td:hover:before {
