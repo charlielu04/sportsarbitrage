@@ -2,13 +2,13 @@ const express = require("express");
 const PORT = 3001;
 const app = express();
 
-// const cors = require("cors");
-// const corsOptions = {
-//   origin: "*",
-//   credentials: true, //access-control-allow-credentials:true
-//   optionSuccessStatus: 200,
-// };
-// app.use(cors(corsOptions)); // Use this after the variable declaration
+const cors = require("cors");
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+app.use(cors(corsOptions)); // Use this after the variable declaration
 
 app.post("/api/email", express.json(), async (req, res) => {
   const postgres = require("postgres");
