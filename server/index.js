@@ -10,8 +10,28 @@ const corsOptions = {
 };
 app.use(cors(corsOptions)); // Use this after the variable declaration
 
-app.post("/api/phonenumber", express.json(), function (req, res) {
-  res.send("Hello POST");
+app.post("/api/email", express.json(), async (req, res) => {
+  const postgres = require("postgres");
+  require("dotenv").config();
+
+  let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
+
+  const sql = postgres({
+    host: PGHOST,
+    database: PGDATABASE,
+    username: PGUSER,
+    password: PGPASSWORD,
+    port: 5432,
+    ssl: "require",
+    connection: {
+      options: `project=${ENDPOINT_ID}`,
+    },
+  });
+
+  const body = req.body;
+  var r =
+    await sql`INSERT INTO people (name, email) VALUES (${body.name}, ${body.email})`;
+  res.send(r);
 });
 app.get("/picks", async (req, res) => {
   const postgres = require("postgres");

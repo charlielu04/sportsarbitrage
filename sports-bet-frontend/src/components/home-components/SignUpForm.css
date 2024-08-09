@@ -1,0 +1,59 @@
+.email-div {
+  margin-left: 3%;
+  margin-top: 30px;
+  margin-right: 5%;
+  color: #e5dfdf;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.header {
+  margin-left: 20px;
+}
+
+.email-text {
+  margin-bottom: 25px;
+}
+.email-form {
+  margin-left: 20px;
+}
+.email-form-item {
+  margin-top: -12px;
+}
+
+.email-input {
+   position: absolute;
+   left: 10.5%;
+   border-radius: 5px;
+}
+
+.email-submit-button {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 100px;
+  position: relative;
+  left: 6.7%;
+}
+
+.email-confirmations {
+  margin-left: 3%;
+  margin-top: 30px;
+  margin-right: 5%;
+  color: #e5dfdf;
+  background-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.email-confirmation-error {
+  color: rgba(189, 37, 37, 0.854);
+  font-weight: bold;
+}
+
+.email-confirmation-success {
+  color: rgba(23, 236, 65, 0.854);
+  font-weight: bold;
+}

@@ -13,9 +13,9 @@ function Navbar() {
       <a href="/#odds-converter" className="navbar-item">
         Odds Converter
       </a>
-      <a href="/#arbitrage-calculator" className="navbar-item">
+      {/* <a href="/#arbitrage-calculator" className="navbar-item">
         Arbitrage Calculator
-      </a>
+      </a> */}
       
     </section>
   );
