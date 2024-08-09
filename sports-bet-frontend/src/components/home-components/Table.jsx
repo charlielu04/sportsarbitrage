@@ -64,7 +64,7 @@ function Table() {
   );
 
   React.useEffect(() => {
-    axios.get("http://localhost:3001/picks").then((res) => {
+    axios.get("https://sportsarbitrage-server.vercel.app/picks").then((res) => {
       for (var element of res.data) {
         element["home_bet"] =
           String(Math.round(element["home_bet"] * 100)) + "%";

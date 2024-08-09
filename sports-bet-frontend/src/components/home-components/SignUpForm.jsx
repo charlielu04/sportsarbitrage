@@ -17,7 +17,7 @@ function SignUpForm() {
       setErrorMsgVisable(false);
       setSuccessMsgVisable(true);
       axios
-        .post("http://localhost:3001/api/email", {
+        .post("https://sportsarbitrage-server.vercel.app/api/email", {
           name: name,
           email: email,
         })
