@@ -33,7 +33,10 @@ app.post("/api/email", express.json(), async (req, res) => {
     await sql`INSERT INTO people (name, email) VALUES (${body.name}, ${body.email})`;
   res.send(r);
 });
-app.use("/picks", async (req, res) => {
+app.get("/", (req, res) => {
+  res.send("Hello from server");
+})
+app.get("/picks", async (req, res) => {
   const postgres = require("postgres");
   require("dotenv").config();
 
