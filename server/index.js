@@ -14,12 +14,7 @@ app.post("/api/email", express.json(), async (req, res) => {
   const postgres = require("postgres");
   require("dotenv").config();
 
-  // let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-  let PGHOST='ep-proud-mud-a5tc8zao.us-east-2.aws.neon.tech'
-  let PGDATABASE='sportsbet'
-  let PGUSER='sportsbet_owner'
-  let PGPASSWORD='Fi5NfAO9SpZs'
-  let ENDPOINT_ID='ep-proud-mud-a5tc8zao-pooler'
+  let { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
 
   const sql = postgres({
     host: PGHOST,
